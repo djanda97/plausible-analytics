@@ -10,7 +10,7 @@
     <title>Plausible.Ingestion.Event — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-be2debc95b.js"></script>
+    <script src="dist/sidebar_items-9b722ec549.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -111,6 +111,13 @@ Plausible
 </h1>
 
 
+  <section id="moduledoc">
+<p>This module exposes the <a href="#build_and_buffer/1"><code class="inline">build_and_buffer/1</code></a> function capable of
+turning %Plausible.Ingestion.Request{} into a series of events that in turn
+are uniformly either buffered in batches (to Clickhouse) or dropped
+(e.g. due to spam blocklist) from the processing pipeline.</p>
+  </section>
+
 
   <section id="summary" class="details-list">
     <h1 class="section-heading">
@@ -120,6 +127,29 @@ Plausible
       </a>
       Summary
     </h1>
+
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:drop_reason/0" translate="no">drop_reason()</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:t/0" translate="no">t()</a>
+
+        </div>
+
+      </div>
+
+  </div>
 
   <div class="summary-functions summary">
     <h2>
@@ -132,9 +162,21 @@ Plausible
 
         </div>
 
-          <div class="summary-synopsis"><p>Builds events from %Plausible.Ingestion.Request{} and adds them to Plausible.Event.WriteBuffer.
-This function reads geolocation data and parses the user agent string. Returns :skip if the
-request is identified as spam, or blocked.</p></div>
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#telemetry_event_buffered/0" translate="no">telemetry_event_buffered()</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#telemetry_event_dropped/0" translate="no">telemetry_event_dropped()</a>
+
+        </div>
 
       </div>
 
@@ -142,6 +184,131 @@ request is identified as spam, or blocked.</p></div>
 
   </section>
 
+
+  <section id="types" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#types">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+Types
+    </h1>
+    <div class="types-list">
+<section class="detail" id="t:drop_reason/0">
+
+  <div class="detail-header">
+    <a href="#t:drop_reason/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">drop_reason()</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L21" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> drop_reason() ::
+  :bot | :spam_referrer | <a href="Plausible.Site.GateKeeper.html#t:policy/0">Plausible.Site.GateKeeper.policy</a>() | :invalid</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="t:t/0">
+
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">t()</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L27" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> t() :: %Plausible.Ingestion.Event{
+  changeset: %Ecto.Changeset{
+    action: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+    changes: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+    constraints: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+    data: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+    empty_values: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+    errors: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+    filters: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+    params: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+    prepare: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+    repo: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+    repo_opts: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+    required: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+    types: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+    valid?: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+    validations: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>()
+  },
+  clickhouse_event:
+    %Plausible.ClickhouseEvent{
+      __meta__: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      browser: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      browser_version: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      city_geoname_id: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      country_code: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      domain: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      hostname: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      &quot;meta.key&quot;: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      &quot;meta.value&quot;: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      name: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      operating_system: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      operating_system_version: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      pathname: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      referrer: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      referrer_source: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      screen_size: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      session_id: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      subdivision1_code: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      subdivision2_code: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      timestamp: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      transferred_from: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      user_id: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      utm_campaign: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      utm_content: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      utm_medium: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      utm_source: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+      utm_term: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>()
+    }
+    | nil,
+  clickhouse_event_attrs: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>(),
+  domain: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | nil,
+  drop_reason: <a href="#t:drop_reason/0">drop_reason</a>(),
+  dropped?: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>(),
+  request: <a href="Plausible.Ingestion.Request.html#t:t/0">Plausible.Ingestion.Request.t</a>(),
+  salts: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>()
+}</pre>
+
+      </div>
+
+
+  </section>
+</section>
+
+    </div>
+  </section>
 
   <section id="functions" class="details-list">
     <h1 class="section-heading">
@@ -161,7 +328,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">build_and_buffer(request)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L11" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L39" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -174,13 +341,67 @@ Functions
       <div class="specs">
 
           <pre translate="no"><span class="attribute">@spec</span> build_and_buffer(<a href="Plausible.Ingestion.Request.html#t:t/0">Plausible.Ingestion.Request.t</a>()) ::
-  :ok | :skip | {:error, <a href="https://hexdocs.pm/ecto/3.8.4/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
+  {:ok, %{buffered: [<a href="#t:t/0">t</a>()], dropped: [<a href="#t:t/0">t</a>()]}}</pre>
 
       </div>
 
-<p>Builds events from %Plausible.Ingestion.Request{} and adds them to Plausible.Event.WriteBuffer.
-This function reads geolocation data and parses the user agent string. Returns :skip if the
-request is identified as spam, or blocked.</p>
+
+  </section>
+</section>
+<section class="detail" id="telemetry_event_buffered/0">
+
+  <div class="detail-header">
+    <a href="#telemetry_event_buffered/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">telemetry_event_buffered()</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L65" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> telemetry_event_buffered() :: [<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>()]</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="telemetry_event_dropped/0">
+
+  <div class="detail-header">
+    <a href="#telemetry_event_dropped/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">telemetry_event_dropped()</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L70" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> telemetry_event_dropped() :: [<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>()]</pre>
+
+      </div>
+
+
   </section>
 </section>
 

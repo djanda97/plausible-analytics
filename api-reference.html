@@ -10,7 +10,7 @@
     <title>API Reference — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-be2debc95b.js"></script>
+    <script src="dist/sidebar_items-9b722ec549.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -240,13 +240,6 @@ period.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="Plausible.Billing.Subscription.html" translate="no">Plausible.Billing.Subscription</a>
-
-  </div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="Plausible.ClickhouseEvent.html" translate="no">Plausible.ClickhouseEvent</a>
 
   </div>
@@ -275,7 +268,24 @@ period.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.DataCase.html" translate="no">Plausible.DataCase</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>This module defines the setup for tests requiring
+access to the application's data layer.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.Event.WriteBuffer.html" translate="no">Plausible.Event.WriteBuffer</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Factory.html" translate="no">Plausible.Factory</a>
 
   </div>
 
@@ -297,6 +307,13 @@ period.</p></div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="Plausible.Google.Api.html" translate="no">Plausible.Google.Api</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Google.Api.Mock.html" translate="no">Plausible.Google.Api.Mock</a>
 
   </div>
 
@@ -337,6 +354,13 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p></div
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.HTTPClient.Interface.html" translate="no">Plausible.HTTPClient.Interface</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.HTTPClient.Non200Error.html" translate="no">Plausible.HTTPClient.Non200Error</a>
 
   </div>
@@ -355,6 +379,11 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p></div
 
   </div>
 
+    <div class="summary-synopsis"><p>This module exposes the <a href="#build_and_buffer/1"><code class="inline">build_and_buffer/1</code></a> function capable of
+turning %Plausible.Ingestion.Request{} into a series of events that in turn
+are uniformly either buffered in batches (to Clickhouse) or dropped
+(e.g. due to spam blocklist) from the processing pipeline.</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
@@ -362,12 +391,32 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p></div
 
   </div>
 
-    <div class="summary-synopsis"><p>The %Plausible.Ingestion.Request{} struct stores all needed fields to create an event downstream.</p></div>
+    <div class="summary-synopsis"><p>The %Plausible.Ingestion.Request{} struct stores all needed fields
+to create an event downstream. Pre-eliminary validation is made
+to detect user errors early.</p></div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="Plausible.Mailer.html" translate="no">Plausible.Mailer</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.OpenTelemetry.Sampler.html" translate="no">Plausible.OpenTelemetry.Sampler</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p><a href="https://hexdocs.pm/opentelemetry/readme.html#samplers">Custom OpenTelemetry sampler</a>
+implementation that ignores particular traces to reduce noise. Ingestion
+HTTP requests and queries to Oban tables are ignored, for example.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.PaddleApi.Mock.html" translate="no">Plausible.PaddleApi.Mock</a>
 
   </div>
 
@@ -386,6 +435,15 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p></div
   </div>
 
     <div class="summary-synopsis"><p>Custom PromEx plugin for instrumenting code within Plausible app.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Purge.html" translate="no">Plausible.Purge</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Deletes data from a site.</p></div>
 
 </div>
 <div class="summary-row">
@@ -415,6 +473,8 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p></div
 
   </div>
 
+    <div class="summary-synopsis"><p>Sentry callbacks for filtering and grouping events</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
@@ -443,12 +503,67 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p></div
 
   </div>
 
+    <div class="summary-synopsis"><p>Site schema</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Site.Cache.html" translate="no">Plausible.Site.Cache</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>A &quot;sites by domain&quot; caching interface.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Site.Cache.Warmer.html" translate="no">Plausible.Site.Cache.Warmer</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>A periodic cache warmer.
+Queries all Sites from Postgres, every <code class="inline">interval</code> and pre-populates the cache.
+After each run the process is hibernated, triggering garbage collection.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Site.Cache.Warmer.All.html" translate="no">Plausible.Site.Cache.Warmer.All</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>A Cache.Warmer adapter that refreshes the Sites Cache fully.
+This module exists only to make it explicit what the warmer
+refreshes, to be used in the supervisor tree.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Site.Cache.Warmer.RecentlyUpdated.html" translate="no">Plausible.Site.Cache.Warmer.RecentlyUpdated</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>A Cache.Warmer adapter that only refreshes the Cache
+with recently updated sites every 30 seconds.</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="Plausible.Site.CustomDomain.html" translate="no">Plausible.Site.CustomDomain</a>
 
   </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Site.GateKeeper.html" translate="no">Plausible.Site.GateKeeper</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Thin wrapper around Hammer for gate keeping domain-specific events
+during the ingestion phase. When the site is allowed, gate keeping
+check returns <code class="inline">:allow</code>, otherwise a <code class="inline">:deny</code> tagged tuple is returned
+with one of the following policy markers</p></div>
 
 </div>
 <div class="summary-row">
@@ -463,6 +578,8 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p></div
     <a href="Plausible.Site.ImportedData.html" translate="no">Plausible.Site.ImportedData</a>
 
   </div>
+
+    <div class="summary-synopsis"><p>Embedded schema for Google Analytics imports</p></div>
 
 </div>
 <div class="summary-row">
@@ -565,6 +682,15 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p></div
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.Stats.FilterParser.html" translate="no">Plausible.Stats.FilterParser</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>A module for parsing filters used in stat queries.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.Stats.FilterSuggestions.html" translate="no">Plausible.Stats.FilterSuggestions</a>
 
   </div>
@@ -593,6 +719,15 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p></div
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.Stats.Interval.html" translate="no">Plausible.Stats.Interval</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Collection of functions to work with intervals.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.Stats.Props.html" translate="no">Plausible.Stats.Props</a>
 
   </div>
@@ -608,6 +743,20 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p></div
 <div class="summary-row">
   <div class="summary-signature">
     <a href="Plausible.Stats.Timeseries.html" translate="no">Plausible.Stats.Timeseries</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Test.ClickhouseSetup.html" translate="no">Plausible.Test.ClickhouseSetup</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.TestUtils.html" translate="no">Plausible.TestUtils</a>
 
   </div>
 
@@ -817,13 +966,6 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p></div
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="PlausibleWeb.AutoAuthPlug.html" translate="no">PlausibleWeb.AutoAuthPlug</a>
-
-  </div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="PlausibleWeb.BillingController.html" translate="no">PlausibleWeb.BillingController</a>
 
   </div>
@@ -848,6 +990,16 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p></div
     <a href="PlausibleWeb.Captcha.html" translate="no">PlausibleWeb.Captcha</a>
 
   </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.ConnCase.html" translate="no">PlausibleWeb.ConnCase</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>This module defines the test case to be used by
+tests that require setting up a connection.</p></div>
 
 </div>
 <div class="summary-row">
@@ -898,12 +1050,24 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p></div
 
   </div>
 
+    <div class="summary-synopsis"><p>A Plug that fetches favicon images from DuckDuckGo and returns them
+to the Plausible frontend.</p></div>
+
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="PlausibleWeb.Firewall.html" translate="no">PlausibleWeb.Firewall</a>
 
   </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.FirstLaunchPlug.html" translate="no">PlausibleWeb.FirstLaunchPlug</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Redirects first-launch users to registration page.</p></div>
 
 </div>
 <div class="summary-row">
@@ -937,13 +1101,6 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p></div
 <div class="summary-row">
   <div class="summary-signature">
     <a href="PlausibleWeb.PageController.html" translate="no">PlausibleWeb.PageController</a>
-
-  </div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="PlausibleWeb.PageView.html" translate="no">PlausibleWeb.PageView</a>
 
   </div>
 
@@ -1123,6 +1280,16 @@ Plausible Cloud runs a paid version of DB-IP with more detailed geolocation data
     <a href="Mix.Tasks.PullSandboxSubscription.html" translate="no">mix pull_sandbox_subscription</a>
 
   </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Mix.Tasks.SendPageview.html" translate="no">mix send_pageview</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>It's often necessary to generate fake events for development and testing purposes. This Mix Task provides a quick and easy
+way to generate a pageview or custom event, either in your development environment or a remote Plausible instance.</p></div>
 
 </div>
 

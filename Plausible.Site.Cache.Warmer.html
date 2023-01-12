@@ -7,10 +7,10 @@
     <meta name="generator" content="ExDoc v0.28.5">
     <meta name="project" content="Plausible v0.0.1">
 
-    <title>Plausible.Billing.Subscription — Plausible v0.0.1</title>
+    <title>Plausible.Site.Cache.Warmer — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-be2debc95b.js"></script>
+    <script src="dist/sidebar_items-9b722ec549.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -100,16 +100,28 @@ Plausible
 </button>
 
 
-    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/subscription.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/cache/warmer.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
-  <span translate="no">Plausible.Billing.Subscription</span> 
+  <span translate="no">Plausible.Site.Cache.Warmer</span> 
   <small class="app-vsn" translate="no">(Plausible v0.0.1)</small>
 
 </h1>
 
+
+  <section id="moduledoc">
+<p>A periodic cache warmer.
+Queries all Sites from Postgres, every <code class="inline">interval</code> and pre-populates the cache.
+After each run the process is hibernated, triggering garbage collection.</p><p>Currently Cachex is used, but the underlying implementation can be transparently swapped.</p><p>Child specification options available:</p><ul><li><code class="inline">interval</code> - the number of milliseconds for each warm-up cycle, defaults
+to <code class="inline">:sites_by_domain_cache_refresh_interval</code> application env value
+with random jitter added, for which the maximum is stored under
+<code class="inline">:sites_by_domain_cache_refresh_interval_max_jitter</code> key.</li><li><code class="inline">cache_name</code> - defaults to Cache.name() but can be overriden for testing</li><li><code class="inline">force_start?</code> - enforcess process startup for testing, even if it's barred
+by <code class="inline">Cache.enabled?</code>. This is useful for avoiding issues with DB ownership
+and async tests.</li><li><code class="inline">warmer_fn</code> - used for testing, a custom function to retrieve the items meant
+to be cached during the warm-up cycle.</li></ul><p>See tests for more comprehensive examples.</p>
+  </section>
 
 
   <section id="summary" class="details-list">
@@ -128,7 +140,7 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#changeset/2" translate="no">changeset(model, attrs \\ %{})</a>
+          <a href="#child_spec/1" translate="no">child_spec(opts)</a>
 
         </div>
 
@@ -136,7 +148,7 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#free/1" translate="no">free(attrs \\ %{})</a>
+          <a href="#interval/0" translate="no">interval()</a>
 
         </div>
 
@@ -156,18 +168,16 @@ Plausible
 Functions
     </h1>
     <div class="functions-list">
-<section class="detail" id="changeset/2">
-
-    <span id="changeset/1"></span>
+<section class="detail" id="child_spec/1">
 
   <div class="detail-header">
-    <a href="#changeset/2" class="detail-link" title="Link to this function">
+    <a href="#child_spec/1" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">changeset(model, attrs \\ %{})</h1>
+    <h1 class="signature" translate="no">child_spec(opts)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/subscription.ex#L36" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/cache/warmer.ex#L32" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -176,22 +186,26 @@ Functions
   </div>
 
   <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> child_spec(<a href="https://hexdocs.pm/elixir/Keyword.html#t:t/0">Keyword.t</a>()) :: <a href="https://hexdocs.pm/elixir/Supervisor.html#t:child_spec/0">Supervisor.child_spec</a>() | :ignore</pre>
+
+      </div>
 
 
   </section>
 </section>
-<section class="detail" id="free/1">
-
-    <span id="free/0"></span>
+<section class="detail" id="interval/0">
 
   <div class="detail-header">
-    <a href="#free/1" class="detail-link" title="Link to this function">
+    <a href="#interval/0" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">free(attrs \\ %{})</h1>
+    <h1 class="signature" translate="no">interval()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/subscription.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/cache/warmer.ex#L73" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -200,6 +214,12 @@ Functions
   </div>
 
   <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> interval() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pos_integer</a>()</pre>
+
+      </div>
 
 
   </section>

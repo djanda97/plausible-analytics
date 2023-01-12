@@ -10,7 +10,7 @@
     <title>Plausible.SentryFilter — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-be2debc95b.js"></script>
+    <script src="dist/sidebar_items-9b722ec549.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -111,6 +111,10 @@ Plausible
 </h1>
 
 
+  <section id="moduledoc">
+<p>Sentry callbacks for filtering and grouping events</p>
+  </section>
+
 
   <section id="summary" class="details-list">
     <h1 class="section-heading">
@@ -125,6 +129,14 @@ Plausible
     <h2>
       <a href="#functions">Functions</a>
     </h2>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#before_send/1" translate="no">before_send(event)</a>
+
+        </div>
+
+      </div>
 
       <div class="summary-row">
         <div class="summary-signature">
@@ -150,6 +162,34 @@ Plausible
 Functions
     </h1>
     <div class="functions-list">
+<section class="detail" id="before_send/1">
+
+  <div class="detail-header">
+    <a href="#before_send/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">before_send(event)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/sentry_filter.ex#L15" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> before_send(<a href="https://hexdocs.pm/sentry/8.0.6/Sentry.Event.html#t:t/0">Sentry.Event.t</a>()) :: <a href="https://hexdocs.pm/sentry/8.0.6/Sentry.Event.html#t:t/0">Sentry.Event.t</a>()</pre>
+
+      </div>
+
+
+  </section>
+</section>
 <section class="detail" id="exclude_exception?/2">
 
   <div class="detail-header">
@@ -159,7 +199,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">exclude_exception?(exception, source)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/sentry_filter.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/sentry_filter.ex#L7" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>

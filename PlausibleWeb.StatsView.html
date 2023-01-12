@@ -10,7 +10,7 @@
     <title>PlausibleWeb.StatsView — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-be2debc95b.js"></script>
+    <script src="dist/sidebar_items-9b722ec549.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -138,14 +138,6 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#admin_email/0" translate="no">admin_email()</a>
-
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
           <a href="#bar/3" translate="no">bar(count, all, color \\ :blue)</a>
 
         </div>
@@ -173,6 +165,16 @@ Plausible
           <a href="#plausible_url/0" translate="no">plausible_url()</a>
 
         </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#pretty_stats_url/1" translate="no">pretty_stats_url(site)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Returns a readable stats URL.</p></div>
 
       </div>
 
@@ -242,28 +244,6 @@ Functions
 <p>The resource name, as an atom, for this view</p>
   </section>
 </section>
-<section class="detail" id="admin_email/0">
-
-  <div class="detail-header">
-    <a href="#admin_email/0" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">admin_email()</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/views/stats_view.ex#L4" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
 <section class="detail" id="bar/3">
 
     <span id="bar/2"></span>
@@ -275,7 +255,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">bar(count, all, color \\ :blue)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/views/stats_view.ex#L50" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/views/stats_view.ex#L46" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -297,7 +277,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">base_domain()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/views/stats_view.ex#L8" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/views/stats_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -319,7 +299,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">large_number_format(n)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/views/stats_view.ex#L16" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/views/stats_view.ex#L12" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -341,7 +321,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">plausible_url()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/views/stats_view.ex#L12" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/views/stats_view.ex#L8" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -352,6 +332,39 @@ Functions
   <section class="docstring">
 
 
+  </section>
+</section>
+<section class="detail" id="pretty_stats_url/1">
+
+  <div class="detail-header">
+    <a href="#pretty_stats_url/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">pretty_stats_url(site)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/views/stats_view.ex#L92" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Returns a readable stats URL.</p><p>Native Phoenix router functions percent-encode all diacritics, resulting in
+ugly URLs, e.g. <code class="inline">https://plausible.io/café.com</code> transforms into
+<code class="inline">https://plausible.io/caf%C3%A9.com</code>.</p><p>This function encodes only the slash (<code class="inline">/</code>) character from the site's domain.</p><h2 id="pretty_stats_url/1-examples" class="section-heading">
+  <a href="#pretty_stats_url/1-examples" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">examples</p>
+  </a>
+  Examples
+</h2>
+<p>   iex&gt; PlausibleWeb.StatsView.pretty_stats_url(%Plausible.Site{domain: &quot;user.gittea.io/repo&quot;})
+   &quot;<a href="http://localhost:8000/user.gittea.io%2Frepo%22">http://localhost:8000/user.gittea.io%2Frepo&quot;</a></p><p>   iex&gt; PlausibleWeb.StatsView.pretty_stats_url(%Plausible.Site{domain: &quot;anakin.test&quot;})
+   &quot;<a href="http://localhost:8000/anakin.test%22">http://localhost:8000/anakin.test&quot;</a></p><p>   iex&gt; PlausibleWeb.StatsView.pretty_stats_url(%Plausible.Site{domain: &quot;café.test&quot;})
+   &quot;<a href="http://localhost:8000/caf%C3%A9.test%22">http://localhost:8000/café.test&quot;</a></p>
   </section>
 </section>
 <section class="detail" id="render/2">
@@ -387,7 +400,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">stats_container_class(conn)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/views/stats_view.ex#L56" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/views/stats_view.ex#L52" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
