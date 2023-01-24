@@ -29,6 +29,7 @@ Plausible.ConfigHelpers.html
 Plausible.DataCase.html
 Plausible.Event.WriteBuffer.html
 Plausible.Factory.html
+Plausible.Geo.html
 Plausible.Goal.html
 Plausible.Goals.html
 Plausible.Google.Api.Mock.html
@@ -166,8 +167,8 @@ dist/html/fonts/remixicon.svg
 dist/html/fonts/remixicon.ttf
 dist/html/fonts/remixicon.woff
 dist/html/fonts/remixicon.woff2
-dist/search_items-3840f2ae6e.js
-dist/sidebar_items-9b722ec549.js
+dist/search_items-f7b0f1ab91.js
+dist/sidebar_items-471eeb4115.js
 index.html
 readme.html
 search.html
