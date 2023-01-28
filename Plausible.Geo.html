@@ -10,7 +10,7 @@
     <title>Plausible.Geo — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-471eeb4115.js"></script>
+    <script src="dist/sidebar_items-82bb42e23d.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -232,8 +232,8 @@ Functions
   </a>
   Examples
 </h2>
-<p>  In the case of a DB-IP database:</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">database_type</span><span class="p" data-group-id="2330171084-1">(</span><span class="p" data-group-id="2330171084-1">)</span><span class="w">
-</span><span class="s">&quot;DBIP-City-Lite&quot;</span></code></pre><p>  In the case of a MaxMind database:</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">database_type</span><span class="p" data-group-id="8560098761-1">(</span><span class="p" data-group-id="8560098761-1">)</span><span class="w">
+<p>  In the case of a DB-IP database:</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">database_type</span><span class="p" data-group-id="8898930808-1">(</span><span class="p" data-group-id="8898930808-1">)</span><span class="w">
+</span><span class="s">&quot;DBIP-City-Lite&quot;</span></code></pre><p>  In the case of a MaxMind database:</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">database_type</span><span class="p" data-group-id="5502983938-1">(</span><span class="p" data-group-id="5502983938-1">)</span><span class="w">
 </span><span class="s">&quot;GeoLite2-City&quot;</span></code></pre>
   </section>
 </section>
@@ -273,8 +273,8 @@ asynchronously.</p></li></ul><h2 id="load_db/1-examples" class="section-heading"
   </a>
   Examples
 </h2>
-<p>  Loading from a local file:</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">load_db</span><span class="p" data-group-id="0320431798-1">(</span><span class="ss">path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/etc/plausible/dbip-city.mmdb&quot;</span><span class="p" data-group-id="0320431798-1">)</span><span class="w">
-</span><span class="ss">:ok</span></code></pre><p>  Downloading a MaxMind DB (this license key is no longer active):</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">load_db</span><span class="p" data-group-id="1503765251-1">(</span><span class="ss">license_key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;LNpsJCCKPis6XvBP&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">edition</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;GeoLite2-City&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">async</span><span class="p">:</span><span class="w"> </span><span class="no">true</span><span class="p" data-group-id="1503765251-1">)</span><span class="w">
+<p>  Loading from a local file:</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">load_db</span><span class="p" data-group-id="4952874532-1">(</span><span class="ss">path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/etc/plausible/dbip-city.mmdb&quot;</span><span class="p" data-group-id="4952874532-1">)</span><span class="w">
+</span><span class="ss">:ok</span></code></pre><p>  Downloading a MaxMind DB (this license key is no longer active):</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">load_db</span><span class="p" data-group-id="0664760135-1">(</span><span class="ss">license_key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;LNpsJCCKPis6XvBP&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">edition</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;GeoLite2-City&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">async</span><span class="p">:</span><span class="w"> </span><span class="no">true</span><span class="p" data-group-id="0664760135-1">)</span><span class="w">
 </span><span class="ss">:ok</span></code></pre>
   </section>
 </section>
@@ -303,21 +303,21 @@ asynchronously.</p></li></ul><h2 id="load_db/1-examples" class="section-heading"
   </a>
   Examples
 </h2>
-<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">lookup</span><span class="p" data-group-id="4441761807-1">(</span><span class="s">&quot;8.7.6.5&quot;</span><span class="p" data-group-id="4441761807-1">)</span><span class="w">
-</span><span class="p" data-group-id="4441761807-2">%{</span><span class="w">
-  </span><span class="s">&quot;city&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="4441761807-3">%{</span><span class="w">
+<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">lookup</span><span class="p" data-group-id="8517166633-1">(</span><span class="s">&quot;8.7.6.5&quot;</span><span class="p" data-group-id="8517166633-1">)</span><span class="w">
+</span><span class="p" data-group-id="8517166633-2">%{</span><span class="w">
+  </span><span class="s">&quot;city&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="8517166633-3">%{</span><span class="w">
     </span><span class="s">&quot;geoname_id&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="mi">5349755</span><span class="p">,</span><span class="w">
-    </span><span class="s">&quot;names&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="4441761807-4">%{</span><span class="w">
+    </span><span class="s">&quot;names&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="8517166633-4">%{</span><span class="w">
       </span><span class="s">&quot;de&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;Fontana&quot;</span><span class="p">,</span><span class="w">
       </span><span class="s">&quot;en&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;Fontana&quot;</span><span class="p">,</span><span class="w">
       </span><span class="s">&quot;ja&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;フォンタナ&quot;</span><span class="p">,</span><span class="w">
       </span><span class="s">&quot;ru&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;Фонтана&quot;</span><span class="w">
-    </span><span class="p" data-group-id="4441761807-4">}</span><span class="w">
-  </span><span class="p" data-group-id="4441761807-3">}</span><span class="p">,</span><span class="w">
-  </span><span class="s">&quot;continent&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="4441761807-5">%{</span><span class="w">
+    </span><span class="p" data-group-id="8517166633-4">}</span><span class="w">
+  </span><span class="p" data-group-id="8517166633-3">}</span><span class="p">,</span><span class="w">
+  </span><span class="s">&quot;continent&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="8517166633-5">%{</span><span class="w">
     </span><span class="s">&quot;code&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;NA&quot;</span><span class="p">,</span><span class="w">
     </span><span class="s">&quot;geoname_id&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="mi">6255149</span><span class="p">,</span><span class="w">
-    </span><span class="s">&quot;names&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="4441761807-6">%{</span><span class="w">
+    </span><span class="s">&quot;names&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="8517166633-6">%{</span><span class="w">
       </span><span class="s">&quot;de&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;Nordamerika&quot;</span><span class="p">,</span><span class="w">
       </span><span class="s">&quot;en&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;North America&quot;</span><span class="p">,</span><span class="w">
       </span><span class="s">&quot;es&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;Norteamérica&quot;</span><span class="p">,</span><span class="w">
@@ -326,12 +326,12 @@ asynchronously.</p></li></ul><h2 id="load_db/1-examples" class="section-heading"
       </span><span class="s">&quot;pt-BR&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;América do Norte&quot;</span><span class="p">,</span><span class="w">
       </span><span class="s">&quot;ru&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;Северная Америка&quot;</span><span class="p">,</span><span class="w">
       </span><span class="s">&quot;zh-CN&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;北美洲&quot;</span><span class="w">
-    </span><span class="p" data-group-id="4441761807-6">}</span><span class="w">
-  </span><span class="p" data-group-id="4441761807-5">}</span><span class="p">,</span><span class="w">
-  </span><span class="s">&quot;country&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="4441761807-7">%{</span><span class="w">
+    </span><span class="p" data-group-id="8517166633-6">}</span><span class="w">
+  </span><span class="p" data-group-id="8517166633-5">}</span><span class="p">,</span><span class="w">
+  </span><span class="s">&quot;country&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="8517166633-7">%{</span><span class="w">
     </span><span class="s">&quot;geoname_id&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="mi">6252001</span><span class="p">,</span><span class="w">
     </span><span class="s">&quot;iso_code&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;US&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="s">&quot;names&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="4441761807-8">%{</span><span class="w">
+    </span><span class="s">&quot;names&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="8517166633-8">%{</span><span class="w">
       </span><span class="s">&quot;de&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;Vereinigte Staaten&quot;</span><span class="p">,</span><span class="w">
       </span><span class="s">&quot;en&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;United States&quot;</span><span class="p">,</span><span class="w">
       </span><span class="s">&quot;es&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;Estados Unidos&quot;</span><span class="p">,</span><span class="w">
@@ -340,20 +340,20 @@ asynchronously.</p></li></ul><h2 id="load_db/1-examples" class="section-heading"
       </span><span class="s">&quot;pt-BR&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;EUA&quot;</span><span class="p">,</span><span class="w">
       </span><span class="s">&quot;ru&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;США&quot;</span><span class="p">,</span><span class="w">
       </span><span class="s">&quot;zh-CN&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;美国&quot;</span><span class="w">
-    </span><span class="p" data-group-id="4441761807-8">}</span><span class="w">
-  </span><span class="p" data-group-id="4441761807-7">}</span><span class="p">,</span><span class="w">
-  </span><span class="s">&quot;location&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="4441761807-9">%{</span><span class="w">
+    </span><span class="p" data-group-id="8517166633-8">}</span><span class="w">
+  </span><span class="p" data-group-id="8517166633-7">}</span><span class="p">,</span><span class="w">
+  </span><span class="s">&quot;location&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="8517166633-9">%{</span><span class="w">
     </span><span class="s">&quot;accuracy_radius&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
     </span><span class="s">&quot;latitude&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="mf">34.1211</span><span class="p">,</span><span class="w">
     </span><span class="s">&quot;longitude&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">-</span><span class="mf">117.4362</span><span class="p">,</span><span class="w">
     </span><span class="s">&quot;metro_code&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="mi">803</span><span class="p">,</span><span class="w">
     </span><span class="s">&quot;time_zone&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;America/Los_Angeles&quot;</span><span class="w">
-  </span><span class="p" data-group-id="4441761807-9">}</span><span class="p">,</span><span class="w">
-  </span><span class="s">&quot;postal&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="4441761807-10">%{</span><span class="s">&quot;code&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;92336&quot;</span><span class="p" data-group-id="4441761807-10">}</span><span class="p">,</span><span class="w">
-  </span><span class="s">&quot;registered_country&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="4441761807-11">%{</span><span class="w">
+  </span><span class="p" data-group-id="8517166633-9">}</span><span class="p">,</span><span class="w">
+  </span><span class="s">&quot;postal&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="8517166633-10">%{</span><span class="s">&quot;code&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;92336&quot;</span><span class="p" data-group-id="8517166633-10">}</span><span class="p">,</span><span class="w">
+  </span><span class="s">&quot;registered_country&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="8517166633-11">%{</span><span class="w">
     </span><span class="s">&quot;geoname_id&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="mi">6252001</span><span class="p">,</span><span class="w">
     </span><span class="s">&quot;iso_code&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;US&quot;</span><span class="p">,</span><span class="w">
-    </span><span class="s">&quot;names&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="4441761807-12">%{</span><span class="w">
+    </span><span class="s">&quot;names&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="8517166633-12">%{</span><span class="w">
       </span><span class="s">&quot;de&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;Vereinigte Staaten&quot;</span><span class="p">,</span><span class="w">
       </span><span class="s">&quot;en&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;United States&quot;</span><span class="p">,</span><span class="w">
       </span><span class="s">&quot;es&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;Estados Unidos&quot;</span><span class="p">,</span><span class="w">
@@ -362,13 +362,13 @@ asynchronously.</p></li></ul><h2 id="load_db/1-examples" class="section-heading"
       </span><span class="s">&quot;pt-BR&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;EUA&quot;</span><span class="p">,</span><span class="w">
       </span><span class="s">&quot;ru&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;США&quot;</span><span class="p">,</span><span class="w">
       </span><span class="s">&quot;zh-CN&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;美国&quot;</span><span class="w">
-    </span><span class="p" data-group-id="4441761807-12">}</span><span class="w">
-  </span><span class="p" data-group-id="4441761807-11">}</span><span class="p">,</span><span class="w">
-  </span><span class="s">&quot;subdivisions&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="4441761807-13">[</span><span class="w">
-    </span><span class="p" data-group-id="4441761807-14">%{</span><span class="w">
+    </span><span class="p" data-group-id="8517166633-12">}</span><span class="w">
+  </span><span class="p" data-group-id="8517166633-11">}</span><span class="p">,</span><span class="w">
+  </span><span class="s">&quot;subdivisions&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="8517166633-13">[</span><span class="w">
+    </span><span class="p" data-group-id="8517166633-14">%{</span><span class="w">
       </span><span class="s">&quot;geoname_id&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="mi">5332921</span><span class="p">,</span><span class="w">
       </span><span class="s">&quot;iso_code&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;CA&quot;</span><span class="p">,</span><span class="w">
-      </span><span class="s">&quot;names&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="4441761807-15">%{</span><span class="w">
+      </span><span class="s">&quot;names&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="8517166633-15">%{</span><span class="w">
         </span><span class="s">&quot;de&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;Kalifornien&quot;</span><span class="p">,</span><span class="w">
         </span><span class="s">&quot;en&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;California&quot;</span><span class="p">,</span><span class="w">
         </span><span class="s">&quot;es&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;California&quot;</span><span class="p">,</span><span class="w">
@@ -377,10 +377,10 @@ asynchronously.</p></li></ul><h2 id="load_db/1-examples" class="section-heading"
         </span><span class="s">&quot;pt-BR&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;Califórnia&quot;</span><span class="p">,</span><span class="w">
         </span><span class="s">&quot;ru&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;Калифорния&quot;</span><span class="p">,</span><span class="w">
         </span><span class="s">&quot;zh-CN&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;加州&quot;</span><span class="w">
-      </span><span class="p" data-group-id="4441761807-15">}</span><span class="w">
-    </span><span class="p" data-group-id="4441761807-14">}</span><span class="w">
-  </span><span class="p" data-group-id="4441761807-13">]</span><span class="w">
-</span><span class="p" data-group-id="4441761807-2">}</span></code></pre>
+      </span><span class="p" data-group-id="8517166633-15">}</span><span class="w">
+    </span><span class="p" data-group-id="8517166633-14">}</span><span class="w">
+  </span><span class="p" data-group-id="8517166633-13">]</span><span class="w">
+</span><span class="p" data-group-id="8517166633-2">}</span></code></pre>
   </section>
 </section>
 

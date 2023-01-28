@@ -129,6 +129,7 @@ PlausibleWeb.Email.html
 PlausibleWeb.EmailView.html
 PlausibleWeb.Endpoint.html
 PlausibleWeb.ErrorHelpers.html
+PlausibleWeb.ErrorReportController.html
 PlausibleWeb.ErrorView.html
 PlausibleWeb.Favicon.html
 PlausibleWeb.Firewall.html
@@ -167,8 +168,8 @@ dist/html/fonts/remixicon.svg
 dist/html/fonts/remixicon.ttf
 dist/html/fonts/remixicon.woff
 dist/html/fonts/remixicon.woff2
-dist/search_items-f7b0f1ab91.js
-dist/sidebar_items-471eeb4115.js
+dist/search_items-514ccc38ad.js
+dist/sidebar_items-82bb42e23d.js
 index.html
 readme.html
 search.html
