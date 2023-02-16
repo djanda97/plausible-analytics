@@ -22,6 +22,7 @@ Plausible.Billing.PaddleApi.html
 Plausible.Billing.Plans.html
 Plausible.Billing.SiteLocker.html
 Plausible.Billing.html
+Plausible.ChangesetHelpers.html
 Plausible.ClickhouseEvent.html
 Plausible.ClickhouseRepo.html
 Plausible.ClickhouseSession.html
@@ -41,6 +42,7 @@ Plausible.HTTPClient.Interface.html
 Plausible.HTTPClient.Non200Error.html
 Plausible.HTTPClient.html
 Plausible.Imported.html
+Plausible.IngestRepo.html
 Plausible.Ingestion.Event.html
 Plausible.Ingestion.Request.html
 Plausible.Mailer.html
@@ -66,6 +68,7 @@ Plausible.Site.GoogleAuth.html
 Plausible.Site.ImportedData.html
 Plausible.Site.Membership.html
 Plausible.Site.MonthlyReport.html
+Plausible.Site.Removal.html
 Plausible.Site.SharedLink.html
 Plausible.Site.SpikeNotification.html
 Plausible.Site.WeeklyReport.html
@@ -105,6 +108,7 @@ Plausible.Workers.SendEmailReport.html
 Plausible.Workers.SendSiteSetupEmails.html
 Plausible.Workers.SendTrialNotifications.html
 Plausible.Workers.SpikeNotifier.html
+Plausible.Workers.StatsRemoval.html
 Plausible.html
 PlausibleWeb.Api.ExternalController.html
 PlausibleWeb.Api.ExternalSitesController.html
@@ -168,8 +172,8 @@ dist/html/fonts/remixicon.svg
 dist/html/fonts/remixicon.ttf
 dist/html/fonts/remixicon.woff
 dist/html/fonts/remixicon.woff2
-dist/search_items-514ccc38ad.js
-dist/sidebar_items-82bb42e23d.js
+dist/search_items-336d2ce0a5.js
+dist/sidebar_items-73fbd1a410.js
 index.html
 readme.html
 search.html
