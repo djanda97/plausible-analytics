@@ -10,7 +10,7 @@
     <title>Plausible.Ingestion.Event — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-73fbd1a410.js"></script>
+    <script src="dist/sidebar_items-e1675b6302.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -159,6 +159,22 @@ are uniformly either buffered in batches (to Clickhouse) or dropped
       <div class="summary-row">
         <div class="summary-signature">
           <a href="#build_and_buffer/1" translate="no">build_and_buffer(request)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#emit_telemetry_buffered/1" translate="no">emit_telemetry_buffered(event)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#emit_telemetry_dropped/2" translate="no">emit_telemetry_dropped(event, reason)</a>
 
         </div>
 
@@ -342,6 +358,62 @@ Functions
 
           <pre translate="no"><span class="attribute">@spec</span> build_and_buffer(<a href="Plausible.Ingestion.Request.html#t:t/0">Plausible.Ingestion.Request.t</a>()) ::
   {:ok, %{buffered: [<a href="#t:t/0">t</a>()], dropped: [<a href="#t:t/0">t</a>()]}}</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="emit_telemetry_buffered/1">
+
+  <div class="detail-header">
+    <a href="#emit_telemetry_buffered/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">emit_telemetry_buffered(event)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L75" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> emit_telemetry_buffered(<a href="#t:t/0">t</a>()) :: :ok</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="emit_telemetry_dropped/2">
+
+  <div class="detail-header">
+    <a href="#emit_telemetry_dropped/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">emit_telemetry_dropped(event, reason)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L83" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> emit_telemetry_dropped(<a href="#t:t/0">t</a>(), <a href="#t:drop_reason/0">drop_reason</a>()) :: :ok</pre>
 
       </div>
 

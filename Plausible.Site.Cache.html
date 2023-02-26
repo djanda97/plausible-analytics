@@ -10,7 +10,7 @@
     <title>Plausible.Site.Cache — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-73fbd1a410.js"></script>
+    <script src="dist/sidebar_items-e1675b6302.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -186,6 +186,14 @@ queried on each cache refresh.</p><p>Also see tests for more comprehensive examp
 
       <div class="summary-row">
         <div class="summary-signature">
+          <a href="#get_site_id/2" translate="no">get_site_id(domain, opts \\ [])</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
           <a href="#hit_rate/1" translate="no">hit_rate(cache_name \\ :sites_by_domain)</a>
 
         </div>
@@ -344,7 +352,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">enabled?()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/cache.ex#L188" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/cache.ex#L199" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -381,6 +389,36 @@ Functions
       <div class="specs">
 
           <pre translate="no"><span class="attribute">@spec</span> get(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/Keyword.html#t:t/0">Keyword.t</a>()) :: <a href="#t:t/0">t</a>() | nil</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="get_site_id/2">
+
+    <span id="get_site_id/1"></span>
+
+  <div class="detail-header">
+    <a href="#get_site_id/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_site_id(domain, opts \\ [])</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/cache.ex#L184" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> get_site_id(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/Keyword.html#t:t/0">Keyword.t</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pos_integer</a>() | nil</pre>
 
       </div>
 
@@ -596,7 +634,7 @@ going up asynchronously with an empty cache.</p>
     </a>
     <h1 class="signature" translate="no">telemetry_event_refresh(cache_name \\ :sites_by_domain, mode)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/cache.ex#L184" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/cache.ex#L195" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>

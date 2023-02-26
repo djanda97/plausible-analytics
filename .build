@@ -7,6 +7,7 @@ Mix.Tasks.GenerateReferrerFavicons.html
 Mix.Tasks.PullSandboxSubscription.html
 Mix.Tasks.SendPageview.html
 ObanErrorReporter.html
+Plausible.AsyncInsertRepo.html
 Plausible.Auth.ApiKey.html
 Plausible.Auth.ApiKeyAdmin.html
 Plausible.Auth.GracePeriod.html
@@ -43,6 +44,10 @@ Plausible.HTTPClient.Non200Error.html
 Plausible.HTTPClient.html
 Plausible.Imported.html
 Plausible.IngestRepo.html
+Plausible.Ingestion.Counters.Buffer.html
+Plausible.Ingestion.Counters.Record.html
+Plausible.Ingestion.Counters.TelemetryHandler.html
+Plausible.Ingestion.Counters.html
 Plausible.Ingestion.Event.html
 Plausible.Ingestion.Request.html
 Plausible.Mailer.html
@@ -172,8 +177,8 @@ dist/html/fonts/remixicon.svg
 dist/html/fonts/remixicon.ttf
 dist/html/fonts/remixicon.woff
 dist/html/fonts/remixicon.woff2
-dist/search_items-336d2ce0a5.js
-dist/sidebar_items-73fbd1a410.js
+dist/search_items-e9276f1b1e.js
+dist/sidebar_items-e1675b6302.js
 index.html
 readme.html
 search.html
