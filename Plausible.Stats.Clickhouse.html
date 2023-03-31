@@ -10,7 +10,7 @@
     <title>Plausible.Stats.Clickhouse — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-e1675b6302.js"></script>
+    <script src="dist/sidebar_items-54c9e56599.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -136,7 +136,7 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#has_pageviews?/1" translate="no">has_pageviews?(domains)</a>
+          <a href="#has_pageviews?/1" translate="no">has_pageviews?(site)</a>
 
         </div>
 
@@ -176,7 +176,7 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#usage_breakdown/1" translate="no">usage_breakdown(domains)</a>
+          <a href="#usage_breakdown/1" translate="no">usage_breakdown(domains_or_site_ids)</a>
 
         </div>
 
@@ -213,7 +213,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">current_visitors(site, query)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/clickhouse.ex#L151" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/clickhouse.ex#L187" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -233,9 +233,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">has_pageviews?(domains)</h1>
+    <h1 class="signature" translate="no">has_pageviews?(site)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/clickhouse.ex#L158" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/clickhouse.ex#L195" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -257,7 +257,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">imported_pageview_count(site)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/clickhouse.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/clickhouse.ex#L41" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -279,7 +279,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">last_24h_visitors(sites)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/clickhouse.ex#L174" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/clickhouse.ex#L219" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -331,7 +331,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">top_sources(site, query, limit, page, show_noref \\ false, include_details)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/clickhouse.ex#L66" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/clickhouse.ex#L102" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -351,9 +351,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">usage_breakdown(domains)</h1>
+    <h1 class="signature" translate="no">usage_breakdown(domains_or_site_ids)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/clickhouse.ex#L37" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/clickhouse.ex#L50" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -375,7 +375,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">usage_breakdown(domains, date_range)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/clickhouse.ex#L47" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/clickhouse.ex#L60" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>

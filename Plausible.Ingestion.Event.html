@@ -10,7 +10,7 @@
     <title>Plausible.Ingestion.Event — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-e1675b6302.js"></script>
+    <script src="dist/sidebar_items-54c9e56599.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -219,7 +219,7 @@ Types
     </a>
     <h1 class="signature" translate="no">drop_reason()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L21" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L23" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -248,7 +248,7 @@ Types
     </a>
     <h1 class="signature" translate="no">t()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L27" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L29" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -308,13 +308,43 @@ Types
       utm_source: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
       utm_term: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>()
     }
+    | %Plausible.ClickhouseEventV2{
+        __meta__: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        browser: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        browser_version: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        city_geoname_id: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        country_code: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        hostname: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        &quot;meta.key&quot;: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        &quot;meta.value&quot;: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        name: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        operating_system: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        operating_system_version: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        pathname: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        referrer: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        referrer_source: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        screen_size: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        session_id: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        site_id: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        subdivision1_code: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        subdivision2_code: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        timestamp: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        transferred_from: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        user_id: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        utm_campaign: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        utm_content: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        utm_medium: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        utm_source: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(),
+        utm_term: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>()
+      }
     | nil,
   clickhouse_event_attrs: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>(),
   domain: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | nil,
   drop_reason: <a href="#t:drop_reason/0">drop_reason</a>(),
   dropped?: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>(),
   request: <a href="Plausible.Ingestion.Request.html#t:t/0">Plausible.Ingestion.Request.t</a>(),
-  salts: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>()
+  salts: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>(),
+  site_id: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pos_integer</a>() | nil
 }</pre>
 
       </div>
@@ -344,7 +374,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">build_and_buffer(request)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L39" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L42" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -373,7 +403,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">emit_telemetry_buffered(event)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L75" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L78" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -401,7 +431,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">emit_telemetry_dropped(event, reason)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L83" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L86" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -429,7 +459,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">telemetry_event_buffered()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L65" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L68" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -457,7 +487,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">telemetry_event_dropped()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L70" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingestion/event.ex#L73" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>

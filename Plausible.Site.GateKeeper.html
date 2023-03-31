@@ -10,7 +10,7 @@
     <title>Plausible.Site.GateKeeper — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-e1675b6302.js"></script>
+    <script src="dist/sidebar_items-54c9e56599.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -118,7 +118,7 @@ check returns <code class="inline">:allow</code>, otherwise a <code class="inlin
 with one of the following policy markers:</p><ul><li><code class="inline">:not_found</code> (indicates site not found in cache)</li><li><code class="inline">:block</code> (indicates disabled sites)</li><li><code class="inline">:throttle</code> (indicates rate limiting)</li></ul><p>Rate Limiting buckets are configured per site (externally via the CRM).
 See: <a href="Plausible.Site.html"><code class="inline">Plausible.Site</code></a></p><p>To look up each site's configuration, the RateLimiter fetches
 a Site by domain using <code class="inline">Plausible.Cache</code> interface.</p><p>The module defines two policies outside the regular bucket inspection:</p><ul><li>when the the site is not found in cache: not_found</li><li>when the underlying rate limiting mechanism returns
-an internal error: allow</li></ul>
+an internal error: :allow</li></ul>
   </section>
 
 
@@ -139,6 +139,14 @@ an internal error: allow</li></ul>
       <div class="summary-row">
         <div class="summary-signature">
           <a href="#t:policy/0" translate="no">policy()</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:site_id/0" translate="no">site_id()</a>
 
         </div>
 
@@ -217,6 +225,34 @@ Types
 
   </section>
 </section>
+<section class="detail" id="t:site_id/0">
+
+  <div class="detail-header">
+    <a href="#t:site_id/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">site_id()</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/gate_keeper.ex#L3" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> site_id() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pos_integer</a>()</pre>
+
+      </div>
+
+
+  </section>
+</section>
 <section class="detail" id="t:t/0">
 
   <div class="detail-header">
@@ -238,7 +274,7 @@ Types
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@type</span> t() :: :allow | {:deny, <a href="#t:policy/0">policy</a>()}</pre>
+          <pre translate="no"><span class="attribute">@type</span> t() :: {:allow, <a href="#t:site_id/0">site_id</a>()} | {:deny, <a href="#t:policy/0">policy</a>()}</pre>
 
       </div>
 

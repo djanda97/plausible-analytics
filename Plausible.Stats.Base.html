@@ -10,7 +10,7 @@
     <title>Plausible.Stats.Base — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-e1675b6302.js"></script>
+    <script src="dist/sidebar_items-54c9e56599.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -128,7 +128,23 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
+          <a href="#apply_entry_prop_filter/3" translate="no">apply_entry_prop_filter(sessions_q, prop_name, arg3)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
           <a href="#base_event_query/2" translate="no">base_event_query(site, query)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#filter_by_entry_props/2" translate="no">filter_by_entry_props(sessions_q, query)</a>
 
         </div>
 
@@ -184,7 +200,7 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#utc_boundaries/2" translate="no">utc_boundaries(query, timezone)</a>
+          <a href="#utc_boundaries/2" translate="no">utc_boundaries(query, site)</a>
 
         </div>
 
@@ -204,6 +220,28 @@ Plausible
 Functions
     </h1>
     <div class="functions-list">
+<section class="detail" id="apply_entry_prop_filter/3">
+
+  <div class="detail-header">
+    <a href="#apply_entry_prop_filter/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">apply_entry_prop_filter(sessions_q, prop_name, arg3)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/base.ex#L282" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
 <section class="detail" id="base_event_query/2">
 
   <div class="detail-header">
@@ -226,6 +264,28 @@ Functions
 
   </section>
 </section>
+<section class="detail" id="filter_by_entry_props/2">
+
+  <div class="detail-header">
+    <a href="#filter_by_entry_props/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">filter_by_entry_props(sessions_q, query)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/base.ex#L272" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
 <section class="detail" id="filter_converted_sessions/3">
 
   <div class="detail-header">
@@ -235,7 +295,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">filter_converted_sessions(db_query, site, query)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/base.ex#L372" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/base.ex#L439" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -257,7 +317,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">page_regex(expr)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/base.ex#L428" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/base.ex#L522" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -279,7 +339,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">query_events(site, query)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/base.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/base.ex#L34" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -301,7 +361,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">query_sessions(site, query)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/base.ex#L147" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/base.ex#L197" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -323,7 +383,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">select_event_metrics(q, list)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/base.ex#L261" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/base.ex#L318" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -345,7 +405,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">select_session_metrics(q, list)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/base.ex#L301" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/base.ex#L358" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -365,9 +425,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">utc_boundaries(query, timezone)</h1>
+    <h1 class="signature" translate="no">utc_boundaries(query, site)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/base.ex#L398" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/base.ex#L473" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>

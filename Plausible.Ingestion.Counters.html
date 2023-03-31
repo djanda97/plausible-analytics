@@ -10,7 +10,7 @@
     <title>Plausible.Ingestion.Counters — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-e1675b6302.js"></script>
+    <script src="dist/sidebar_items-54c9e56599.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -120,7 +120,7 @@ flushes the internal counter aggregates via <code class="inline">Counters.Buffer
 To take advantage of automatic roll-ups it provides, upon dispatching the
 buffered records to Clickhouse this module transforms each <code class="inline">event_timebucket</code>
 aggregate into a 1-minute resolution.</p><p>Clickhouse connection is set to insert counters asynchronously every time
-a pool checkout is made. Those properties are reverted once the insert is done 
+a pool checkout is made. Those properties are reverted once the insert is done
 (or naturally, if the connection crashes).</p>
   </section>
 

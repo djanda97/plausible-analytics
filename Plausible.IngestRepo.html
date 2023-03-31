@@ -10,7 +10,7 @@
     <title>Plausible.IngestRepo — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-e1675b6302.js"></script>
+    <script src="dist/sidebar_items-54c9e56599.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -261,17 +261,6 @@ pool to disconnect within the given interval.</p></div>
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#explain/3" translate="no">explain(operation, queryable, opts \\ [])</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>A convenience function for SQL-based repositories that executes an EXPLAIN statement or similar
-depending on the adapter to obtain statistics for the given query.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
           <a href="#get!/3" translate="no">get!(queryable, id, opts \\ [])</a>
 
         </div>
@@ -317,16 +306,6 @@ depending on the adapter to obtain statistics for the given query.</p></div>
         </div>
 
           <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/ecto/3.9.4/Ecto.Repo.html#c:get_dynamic_repo/0"><code class="inline">Ecto.Repo.get_dynamic_repo/0</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#in_transaction?/0" translate="no">in_transaction?()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/ecto/3.9.4/Ecto.Repo.html#c:in_transaction?/0"><code class="inline">Ecto.Repo.in_transaction?/0</code></a>.</p></div>
 
       </div>
 
@@ -462,26 +441,6 @@ depending on the adapter to obtain statistics for the given query.</p></div>
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#query_many!/3" translate="no">query_many!(sql, params \\ [], opts \\ [])</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>A convenience function for SQL-based repositories that executes the given multi-result query.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#query_many/3" translate="no">query_many(sql, params \\ [], opts \\ [])</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>A convenience function for SQL-based repositories that executes the given multi-result query.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
           <a href="#reload!/2" translate="no">reload!(queryable, opts \\ [])</a>
 
         </div>
@@ -497,16 +456,6 @@ depending on the adapter to obtain statistics for the given query.</p></div>
         </div>
 
           <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/ecto/3.9.4/Ecto.Repo.html#c:reload/2"><code class="inline">Ecto.Repo.reload/2</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#rollback/1" translate="no">rollback(value)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/ecto/3.9.4/Ecto.Repo.html#c:rollback/1"><code class="inline">Ecto.Repo.rollback/1</code></a>.</p></div>
 
       </div>
 
@@ -547,16 +496,6 @@ depending on the adapter to obtain statistics for the given query.</p></div>
         </div>
 
           <div class="summary-synopsis"><p>A convenience function for SQL-based repositories that translates the given query to SQL.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#transaction/2" translate="no">transaction(fun_or_multi, opts \\ [])</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/ecto/3.9.4/Ecto.Repo.html#c:transaction/2"><code class="inline">Ecto.Repo.transaction/2</code></a>.</p></div>
 
       </div>
 
@@ -907,31 +846,6 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
 <p>Callback implementation for <a href="https://hexdocs.pm/ecto/3.9.4/Ecto.Repo.html#c:exists?/2"><code class="inline">Ecto.Repo.exists?/2</code></a>.</p>
   </section>
 </section>
-<section class="detail" id="explain/3">
-
-    <span id="explain/2"></span>
-
-  <div class="detail-header">
-    <a href="#explain/3" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">explain(operation, queryable, opts \\ [])</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingest_repo.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>A convenience function for SQL-based repositories that executes an EXPLAIN statement or similar
-depending on the adapter to obtain statistics for the given query.</p><p>See <a href="https://hexdocs.pm/ecto_sql/3.9.2/Ecto.Adapters.SQL.html#explain/4"><code class="inline">Ecto.Adapters.SQL.explain/4</code></a> for more information.</p>
-  </section>
-</section>
 <section class="detail" id="get!/3">
 
     <span id="get!/2"></span>
@@ -1048,28 +962,6 @@ depending on the adapter to obtain statistics for the given query.</p><p>See <a 
   <section class="docstring">
 
 <p>Callback implementation for <a href="https://hexdocs.pm/ecto/3.9.4/Ecto.Repo.html#c:get_dynamic_repo/0"><code class="inline">Ecto.Repo.get_dynamic_repo/0</code></a>.</p>
-  </section>
-</section>
-<section class="detail" id="in_transaction?/0">
-
-  <div class="detail-header">
-    <a href="#in_transaction?/0" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">in_transaction?()</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingest_repo.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Callback implementation for <a href="https://hexdocs.pm/ecto/3.9.4/Ecto.Repo.html#c:in_transaction?/0"><code class="inline">Ecto.Repo.in_transaction?/0</code></a>.</p>
   </section>
 </section>
 <section class="detail" id="insert!/2">
@@ -1382,58 +1274,6 @@ depending on the adapter to obtain statistics for the given query.</p><p>See <a 
 <p>A convenience function for SQL-based repositories that executes the given query.</p><p>See <a href="https://hexdocs.pm/ecto_sql/3.9.2/Ecto.Adapters.SQL.html#query/4"><code class="inline">Ecto.Adapters.SQL.query/4</code></a> for more information.</p>
   </section>
 </section>
-<section class="detail" id="query_many!/3">
-
-    <span id="query_many!/1"></span>
-
-    <span id="query_many!/2"></span>
-
-  <div class="detail-header">
-    <a href="#query_many!/3" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">query_many!(sql, params \\ [], opts \\ [])</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingest_repo.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>A convenience function for SQL-based repositories that executes the given multi-result query.</p><p>See <a href="https://hexdocs.pm/ecto_sql/3.9.2/Ecto.Adapters.SQL.html#query_many!/4"><code class="inline">Ecto.Adapters.SQL.query_many!/4</code></a> for more information.</p>
-  </section>
-</section>
-<section class="detail" id="query_many/3">
-
-    <span id="query_many/1"></span>
-
-    <span id="query_many/2"></span>
-
-  <div class="detail-header">
-    <a href="#query_many/3" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">query_many(sql, params \\ [], opts \\ [])</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingest_repo.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>A convenience function for SQL-based repositories that executes the given multi-result query.</p><p>See <a href="https://hexdocs.pm/ecto_sql/3.9.2/Ecto.Adapters.SQL.html#query_many/4"><code class="inline">Ecto.Adapters.SQL.query_many/4</code></a> for more information.</p>
-  </section>
-</section>
 <section class="detail" id="reload!/2">
 
     <span id="reload!/1"></span>
@@ -1480,34 +1320,6 @@ depending on the adapter to obtain statistics for the given query.</p><p>See <a 
   <section class="docstring">
 
 <p>Callback implementation for <a href="https://hexdocs.pm/ecto/3.9.4/Ecto.Repo.html#c:reload/2"><code class="inline">Ecto.Repo.reload/2</code></a>.</p>
-  </section>
-</section>
-<section class="detail" id="rollback/1">
-
-  <div class="detail-header">
-    <a href="#rollback/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">rollback(value)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingest_repo.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-      <div class="specs">
-
-          <pre translate="no"><span class="attribute">@spec</span> rollback(<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">no_return</a>()</pre>
-
-      </div>
-
-<p>Callback implementation for <a href="https://hexdocs.pm/ecto/3.9.4/Ecto.Repo.html#c:rollback/1"><code class="inline">Ecto.Repo.rollback/1</code></a>.</p>
   </section>
 </section>
 <section class="detail" id="start_link/1">
@@ -1602,30 +1414,6 @@ depending on the adapter to obtain statistics for the given query.</p><p>See <a 
   <section class="docstring">
 
 <p>A convenience function for SQL-based repositories that translates the given query to SQL.</p><p>See <a href="https://hexdocs.pm/ecto_sql/3.9.2/Ecto.Adapters.SQL.html#to_sql/3"><code class="inline">Ecto.Adapters.SQL.to_sql/3</code></a> for more information.</p>
-  </section>
-</section>
-<section class="detail" id="transaction/2">
-
-    <span id="transaction/1"></span>
-
-  <div class="detail-header">
-    <a href="#transaction/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">transaction(fun_or_multi, opts \\ [])</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/ingest_repo.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Callback implementation for <a href="https://hexdocs.pm/ecto/3.9.4/Ecto.Repo.html#c:transaction/2"><code class="inline">Ecto.Repo.transaction/2</code></a>.</p>
   </section>
 </section>
 <section class="detail" id="update!/2">
