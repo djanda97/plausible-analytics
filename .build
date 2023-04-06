@@ -73,6 +73,7 @@ Plausible.Site.Cache.Warmer.RecentlyUpdated.html
 Plausible.Site.Cache.Warmer.html
 Plausible.Site.Cache.html
 Plausible.Site.CustomDomain.html
+Plausible.Site.Domain.html
 Plausible.Site.GateKeeper.html
 Plausible.Site.GoogleAuth.html
 Plausible.Site.ImportedData.html
@@ -109,6 +110,7 @@ Plausible.Timezones.html
 Plausible.Workers.CheckUsage.html
 Plausible.Workers.CleanEmailVerificationCodes.html
 Plausible.Workers.CleanInvitations.html
+Plausible.Workers.ExpireDomainChangeTransitions.html
 Plausible.Workers.ImportGoogleAnalytics.html
 Plausible.Workers.LockSites.html
 Plausible.Workers.NotifyAnnualRenewal.html
@@ -181,8 +183,8 @@ dist/html/fonts/remixicon.svg
 dist/html/fonts/remixicon.ttf
 dist/html/fonts/remixicon.woff
 dist/html/fonts/remixicon.woff2
-dist/search_items-a4916a1dd8.js
-dist/sidebar_items-54c9e56599.js
+dist/search_items-6e08286a84.js
+dist/sidebar_items-8912a4f21c.js
 index.html
 readme.html
 search.html

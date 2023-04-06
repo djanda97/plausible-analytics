@@ -10,7 +10,7 @@
     <title>API Reference — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-54c9e56599.js"></script>
+    <script src="dist/sidebar_items-8912a4f21c.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -683,6 +683,15 @@ with recently updated sites every 30 seconds.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.Site.Domain.html" translate="no">Plausible.Site.Domain</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Basic interface for domain changes.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.Site.GateKeeper.html" translate="no">Plausible.Site.GateKeeper</a>
 
   </div>
@@ -941,6 +950,17 @@ with one of the following policy markers</p></div>
     <a href="Plausible.Workers.CleanInvitations.html" translate="no">Plausible.Workers.CleanInvitations</a>
 
   </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Workers.ExpireDomainChangeTransitions.html" translate="no">Plausible.Workers.ExpireDomainChangeTransitions</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Periodic worker that expires domain change transition period.
+Old domains are frozen for a given time, so users can still access them
+before redeploying their scripts and integrations.</p></div>
 
 </div>
 <div class="summary-row">

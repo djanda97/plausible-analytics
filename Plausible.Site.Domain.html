@@ -7,7 +7,7 @@
     <meta name="generator" content="ExDoc v0.28.5">
     <meta name="project" content="Plausible v0.0.1">
 
-    <title>PlausibleWeb.LastSeenPlug — Plausible v0.0.1</title>
+    <title>Plausible.Site.Domain — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
     <script src="dist/sidebar_items-8912a4f21c.js"></script>
@@ -100,16 +100,27 @@ Plausible
 </button>
 
 
-    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/plugs/last_seen_plug.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/domain.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
-  <span translate="no">PlausibleWeb.LastSeenPlug</span> 
+  <span translate="no">Plausible.Site.Domain</span> 
   <small class="app-vsn" translate="no">(Plausible v0.0.1)</small>
 
 </h1>
 
+
+  <section id="moduledoc">
+<p>Basic interface for domain changes.</p><p>Once <a href="Plausible.DataMigration.NumericIDs.html"><code class="inline">Plausible.DataMigration.NumericIDs</code></a> schema migration is ready, 
+domain change operation will be enabled, accessible to the users.</p><p>We will set a transition period of 72 hours
+during which, both old and new domains, will be accepted as traffic
+identifiers to the same site. </p><p>A periodic worker will call the <code class="inline">expire/0</code> function to end it where applicable.
+See: <a href="Plausible.Workers.ExpireDomainChangeTransitions.html"><code class="inline">Plausible.Workers.ExpireDomainChangeTransitions</code></a>.</p><p>The underlying changeset for domain change (see: <a href="Plausible.Site.html"><code class="inline">Plausible.Site</code></a>) relies
+on database trigger installed via <code class="inline">Plausible.Repo.Migrations.AllowDomainChange</code>
+Postgres migration. The trigger checks if either <code class="inline">domain</code> or <code class="inline">domain_changed_from</code>
+exist to ensure unicity.</p>
+  </section>
 
 
   <section id="summary" class="details-list">
@@ -128,7 +139,7 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#call/2" translate="no">call(conn, opts)</a>
+          <a href="#change/3" translate="no">change(site, new_domain, opts \\ [])</a>
 
         </div>
 
@@ -136,7 +147,7 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#init/1" translate="no">init(opts)</a>
+          <a href="#expire_change_transitions/1" translate="no">expire_change_transitions(expire_threshold_hours \\ 72)</a>
 
         </div>
 
@@ -156,16 +167,18 @@ Plausible
 Functions
     </h1>
     <div class="functions-list">
-<section class="detail" id="call/2">
+<section class="detail" id="change/3">
+
+    <span id="change/2"></span>
 
   <div class="detail-header">
-    <a href="#call/2" class="detail-link" title="Link to this function">
+    <a href="#change/3" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">call(conn, opts)</h1>
+    <h1 class="signature" translate="no">change(site, new_domain, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/plugs/last_seen_plug.ex#L11" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/domain.ex#L46" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -174,20 +187,29 @@ Functions
   </div>
 
   <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> change(<a href="Plausible.Site.html#t:t/0">Plausible.Site.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/Keyword.html#t:t/0">Keyword.t</a>()) ::
+  {:ok, <a href="Plausible.Site.html#t:t/0">Plausible.Site.t</a>()} | {:error, <a href="https://hexdocs.pm/ecto/3.9.4/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
+
+      </div>
 
 
   </section>
 </section>
-<section class="detail" id="init/1">
+<section class="detail" id="expire_change_transitions/1">
+
+    <span id="expire_change_transitions/0"></span>
 
   <div class="detail-header">
-    <a href="#init/1" class="detail-link" title="Link to this function">
+    <a href="#expire_change_transitions/1" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">init(opts)</h1>
+    <h1 class="signature" translate="no">expire_change_transitions(expire_threshold_hours \\ 72)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/plugs/last_seen_plug.ex#L7" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/domain.ex#L29" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -196,6 +218,12 @@ Functions
   </div>
 
   <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> expire_change_transitions(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()) :: {:ok, <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">non_neg_integer</a>()}</pre>
+
+      </div>
 
 
   </section>
