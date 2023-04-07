@@ -47,6 +47,7 @@ Plausible.Google.ReportRequest.html
 Plausible.HTTPClient.Interface.html
 Plausible.HTTPClient.Non200Error.html
 Plausible.HTTPClient.html
+Plausible.ImportDeletionRepo.html
 Plausible.Imported.html
 Plausible.IngestRepo.html
 Plausible.Ingestion.Counters.Buffer.html
@@ -183,8 +184,8 @@ dist/html/fonts/remixicon.svg
 dist/html/fonts/remixicon.ttf
 dist/html/fonts/remixicon.woff
 dist/html/fonts/remixicon.woff2
-dist/search_items-6e08286a84.js
-dist/sidebar_items-8912a4f21c.js
+dist/search_items-c28fe62b08.js
+dist/sidebar_items-42159895f0.js
 index.html
 readme.html
 search.html

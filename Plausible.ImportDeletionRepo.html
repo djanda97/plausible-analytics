@@ -7,7 +7,7 @@
     <meta name="generator" content="ExDoc v0.28.5">
     <meta name="project" content="Plausible v0.0.1">
 
-    <title>Plausible.DataMigration.Repo — Plausible v0.0.1</title>
+    <title>Plausible.ImportDeletionRepo — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
     <script src="dist/sidebar_items-42159895f0.js"></script>
@@ -100,20 +100,19 @@ Plausible
 </button>
 
 
-    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
-  <span translate="no">Plausible.DataMigration.Repo</span> 
+  <span translate="no">Plausible.ImportDeletionRepo</span> 
   <small class="app-vsn" translate="no">(Plausible v0.0.1)</small>
 
 </h1>
 
 
   <section id="moduledoc">
-<p>Ecto.Repo for Clickhouse data migrations, to be started manually, 
-outside of the main application supervision tree.</p>
+<p>A dedicated repo for import related mutations</p>
   </section>
 
 
@@ -462,14 +461,6 @@ pool to disconnect within the given interval.</p></div>
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#start/2" translate="no">start(url, max_threads)</a>
-
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
           <a href="#start_link/1" translate="no">start_link(opts \\ [])</a>
 
         </div>
@@ -563,7 +554,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">aggregate(queryable, aggregate, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -585,7 +576,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">aggregate(queryable, aggregate, field, opts)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -609,7 +600,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">all(queryable, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -631,7 +622,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">checked_out?()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -655,7 +646,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">checkout(fun, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -677,7 +668,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">child_spec(opts)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -699,7 +690,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">config()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -721,7 +712,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">default_options(operation)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -745,7 +736,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">delete!(struct, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -769,7 +760,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">delete(struct, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -793,7 +784,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">delete_all(queryable, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -817,7 +808,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">disconnect_all(interval, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L1" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -842,7 +833,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">exists?(queryable, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -866,7 +857,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">get!(queryable, id, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -890,7 +881,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">get(queryable, id, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -914,7 +905,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">get_by!(queryable, clauses, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -938,7 +929,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">get_by(queryable, clauses, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -960,7 +951,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">get_dynamic_repo()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -984,7 +975,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">insert!(struct, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1008,7 +999,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">insert(struct, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1032,7 +1023,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">insert_all(schema_or_source, entries, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1056,7 +1047,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">insert_or_update!(changeset, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1080,7 +1071,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">insert_or_update(changeset, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1102,7 +1093,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">load(schema_or_types, data)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1126,7 +1117,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">one!(queryable, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1150,7 +1141,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">one(queryable, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1174,7 +1165,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">preload(struct_or_structs_or_nil, preloads, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1196,7 +1187,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">prepare_query(operation, query, opts)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1218,7 +1209,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">put_dynamic_repo(dynamic)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1244,7 +1235,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">query!(sql, params \\ [], opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L1" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1270,7 +1261,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">query(sql, params \\ [], opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L1" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1294,7 +1285,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">reload!(queryable, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1318,7 +1309,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">reload(queryable, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1329,28 +1320,6 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
   <section class="docstring">
 
 <p>Callback implementation for <a href="https://hexdocs.pm/ecto/3.9.4/Ecto.Repo.html#c:reload/2"><code class="inline">Ecto.Repo.reload/2</code></a>.</p>
-  </section>
-</section>
-<section class="detail" id="start/2">
-
-  <div class="detail-header">
-    <a href="#start/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">start(url, max_threads)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L10" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
   </section>
 </section>
 <section class="detail" id="start_link/1">
@@ -1364,7 +1333,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">start_link(opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1388,7 +1357,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">stop(timeout \\ 5000)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1412,7 +1381,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">stream(queryable, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1434,7 +1403,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">to_sql(operation, queryable)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L1" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1458,7 +1427,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">update!(struct, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1482,7 +1451,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">update(struct, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1506,7 +1475,7 @@ pool to disconnect within the given interval.</p><p>See <a href="https://hexdocs
     </a>
     <h1 class="signature" translate="no">update_all(queryable, updates, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/data_migration/repo.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/import_deletion_repo.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
