@@ -13,7 +13,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-XWGFFSCD.js"></script>
-    <script src="dist/sidebar_items-BED391F2.js"></script>
+    <script src="dist/sidebar_items-D32CDA6C.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -129,9 +129,11 @@ Plausible
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#create/2" translate="no">create(site, params)</a>
+        <a href="#create/3" translate="no">create(site, params, now \\ DateTime.utc_now())</a>
 
       </div>
+
+        <div class="summary-synopsis"><p>Creates a Goal for a site.</p></div>
 
     </div>
 
@@ -140,6 +142,8 @@ Plausible
         <a href="#delete/2" translate="no">delete(id, site)</a>
 
       </div>
+
+        <div class="summary-synopsis"><p>If a goal belongs to funnel(s), we need to inspect their number of steps.</p></div>
 
     </div>
 
@@ -153,7 +157,7 @@ Plausible
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#for_site/1" translate="no">for_site(site)</a>
+        <a href="#for_site/2" translate="no">for_site(site, opts \\ [])</a>
 
       </div>
 
@@ -173,58 +177,16 @@ Plausible
 Functions
     </h1>
     <div class="functions-list">
-<section class="detail" id="create/2">
+<section class="detail" id="create/3">
+
+    <span id="create/2"></span>
 
   <div class="detail-header">
-    <a href="#create/2" class="detail-link" title="Link to this function">
+    <a href="#create/3" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">create(site, params)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/goals.ex#L5" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
-<section class="detail" id="delete/2">
-
-  <div class="detail-header">
-    <a href="#delete/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">delete(id, site)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/goals.ex#L62" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
-<section class="detail" id="find_or_create/2">
-
-  <div class="detail-header">
-    <a href="#find_or_create/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">find_or_create(site, map)</h1>
+    <h1 class="signature" translate="no">create(site, params, now \\ DateTime.utc_now())</h1>
 
       <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/goals.ex#L14" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
@@ -236,19 +198,70 @@ Functions
 
   <section class="docstring">
 
-
+<p>Creates a Goal for a site.</p><p>If the created goal is a revenue goal, it sets site.updated_at to be
+refreshed by the sites cache, as revenue goals are used during ingestion.</p>
   </section>
 </section>
-<section class="detail" id="for_site/1">
+<section class="detail" id="delete/2">
 
   <div class="detail-header">
-    <a href="#for_site/1" class="detail-link" title="Link to this function">
+    <a href="#delete/2" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">for_site(site)</h1>
+    <h1 class="signature" translate="no">delete(id, site)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/goals.ex#L50" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/goals.ex#L110" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>If a goal belongs to funnel(s), we need to inspect their number of steps.</p><p>If it exceeds the minimum allowed (defined via <a href="Plausible.Funnel.html#min_steps/0"><code class="inline">Plausible.Funnel.min_steps/0</code></a>),
+the funnel will be reduced (i.e. a step associated with the goal to be deleted
+is removed), so that the minimum number of steps is preserved. This is done
+implicitly, by postgres, as per on_delete: :delete_all.</p><p>Otherwise, for associated funnel(s) consisting of minimum number steps only,
+funnel record(s) are removed completely along with the targeted goal.</p>
+  </section>
+</section>
+<section class="detail" id="find_or_create/2">
+
+  <div class="detail-header">
+    <a href="#find_or_create/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">find_or_create(site, map)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/goals.ex#L40" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="for_site/2">
+
+    <span id="for_site/1"></span>
+
+  <div class="detail-header">
+    <a href="#for_site/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">for_site(site, opts \\ [])</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/goals.ex#L76" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
